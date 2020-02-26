@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'HelveticaNeue-UL';
+  src: local('HelveticaNeue-UL'), url(./fonts/HelveticaNeueLTStd-UltLt.woff2) format('woff');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Roman';
+  src: local('HelveticaNeue-Roman'), url(./fonts/HelveticaNeueLTStd-Roman.woff2) format('woff');
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'HelveticaNeue-UL', 'HelveticaNeue-Roman', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

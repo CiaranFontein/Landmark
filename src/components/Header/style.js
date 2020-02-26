@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import heroText from "../../images/landmark.svg";
 
-export const StyledHeader = () => styled.div`
+export const StyledHeader = styled.div`
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -20,12 +19,10 @@ export const StyledHeader = () => styled.div`
   padding: 0px 20px;
 `;
 
-export const HeaderTextLogo = styled.div`
-  background-image: url(${heroText});
-  width: 160px;
-  height: 43.19px;
+export const HeaderTextLogo = styled.img`
+  max-width: 100%;
+  height: auto;
   background-size: contain;
-}
 `;
 
 export const HomeLink = styled.a`

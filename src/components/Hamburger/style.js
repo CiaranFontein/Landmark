@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
-export const StyledHamburger = () => styled.div`
-  position: relative;
+export const StyledHamburger = styled.div`
+  position: absolute;
+  top: 24px;
+  right: 67px;
+  height: 54px;
+  width: 40px;
 `;
 
-const hamburgerLine = `position: absolute;
-height: 100px;
-width: 100px;
+const hamburgerLine = `
+position: absolute;
+height: 70px;
+width: 40px;
 border-bottom: 1px solid #fff;
 `;
 

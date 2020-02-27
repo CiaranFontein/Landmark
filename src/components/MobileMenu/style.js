@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import heroBanner from "../../images/heroBannerSmall.jpg";
+import theme from "../../styles";
+const {
+  colours: { secondary, primary },
+  layout: { flexBetween }
+} = theme;
 
 export const StyledMobileMenu = styled.div`
   position: fixed;
@@ -33,18 +38,18 @@ export const MenuItems = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  color: #fff;
+  color: ${primary};
   margin-bottom: 10px;
   font-family: HelveticaNeue-UL, HelveticaNeue-Light, Helvetica, Arial,
     sans-serif;
   font-size: 1.5rem;
   letter-spacing: 2.5px;
+  text-transform: none;
 `;
 
 export const ContactInfo = styled.div`
-  text-transform: uppercase;
   padding-left: 20px;
-  color: #ceaf70;
+  color: ${secondary};
 `;
 
 export const Address = styled.div`
@@ -52,7 +57,6 @@ export const Address = styled.div`
   font-size: 0.7rem;
   letter-spacing: 3px;
   font-weight: 400;
-  letter-height: 50%;
   margin-bottom: 5px;
 `;
 
@@ -63,14 +67,14 @@ export const Underline = styled.div`
   height: 1px;
   width: 66px;
   opacity: 0.7;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid ${primary};
 `;
 
 export const Email = styled.div`
   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 2px;
-  color: #ceaf70;
+  color: ${secondary};
   margin-bottom: 5px;
 `;
 
@@ -78,7 +82,7 @@ export const Phone = styled.div`
   font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 1px;
-  color: #ceaf70;
+  color: ${secondary};
   margin-bottom: 5px;
 `;
 
@@ -87,8 +91,7 @@ export const Sponsors = styled.div`
   bottom: 0px;
   height: 80px;
   width: 70vw;
-  display: flex;
-  justify-content: space-between;
+  ${flexBetween}
 `;
 
 export const SponsorImage = styled.img`

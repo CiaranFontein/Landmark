@@ -1,8 +1,10 @@
 import styled from "styled-components";
-
+import theme from "../../styles";
+const {
+  layout: { flexBetween }
+} = theme;
 export const StyledLanguageButtonHolder = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${flexBetween}
   flex-direction: column;
   position: absolute;
   right: 64px;

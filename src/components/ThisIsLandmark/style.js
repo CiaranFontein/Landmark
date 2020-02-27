@@ -1,18 +1,20 @@
 import styled from "styled-components";
+import theme from "../../styles";
+const {
+  colours: { primary, secondary },
+  layout: { flexCenter }
+} = theme;
 
 export const StyledThisIsLandmark = styled.div`
   height: 300px;
-  display: flex;
-  justify-content: center;
+  ${flexCenter}
   flex-direction: column;
-  align-items: center;
 `;
 
 export const HeaderText = styled.h3`
-  color: #fff;
+  color: ${primary};
   font-size: 0.9rem;
   letter-spacing: 4px;
-  text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 400;
   font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
@@ -25,10 +27,9 @@ export const WhiteTextImage = styled.img`
 `;
 
 export const WatchFilm = styled.a`
-  color: #ceaf70;
+  color: ${secondary};
   font-size: 0.6rem;
   letter-spacing: 4px;
-  text-transform: uppercase;
   font-weight: 900;
   margin-top: 30px;
 `;

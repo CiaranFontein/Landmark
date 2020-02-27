@@ -13,9 +13,8 @@ export const StyledHamburger = styled.div`
   right: 67px;
   height: 54px;
   width: 40px;
-  animation-name: ${linesHolderAnim};
+  animation: ${linesHolderAnim} 0.5s infinite;
   animation-direction: alternate;
-  animation-duration: 0.5s;
 `;
 
 const hamburgerLine = `
@@ -49,21 +48,18 @@ const botHamburgerLineAnim = keyframes`
 export const TopHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -60px;
-  animation-name: ${topHamburgerLineAnim};
+  animation: ${topHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
-  animation-duration: 0.5s;
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -50px;
-  animation-name: ${midHamburgerLineAnim};
+  animation: ${midHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
-  animation-duration: 0.5s;
 `;
 export const BotHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -40px;
-  animation-name: ${botHamburgerLineAnim};
+  animation: ${botHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
-  animation-duration: 0.5s;
 `;

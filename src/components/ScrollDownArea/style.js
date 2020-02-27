@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import theme from "../../styles";
+const {
+  colours: { primary }
+} = theme;
 
 export const StyledScrollDownArea = styled.div`
   position: absolute;
   bottom: 40px;
   left: 20px;
-  color: #fff;
+  color: ${primary};
 `;
 
 export const Line = styled.div`
@@ -22,7 +26,7 @@ export const ScrollDownText = styled.h1`
   letter-height: 1.5rem;
   left: 20px;
   font-size: 0.65rem;
-  color: #fff;
+  color: ${primary};
   padding-bottom: 25px;
 `;
 

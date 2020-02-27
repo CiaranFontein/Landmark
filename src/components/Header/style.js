@@ -147,15 +147,12 @@ export const MenuItems = styled.ul`
   display: list-item;
   list-style: none;
   padding-left: 20px;
-  font-family: HelveticaNeue-UL, Helvetica-Neue, Helvetica, Arial, sans-serif;
   padding-top: 70px;
 `;
 
 export const ListItem = styled.li`
   color: ${primary};
   margin-bottom: 10px;
-  font-family: HelveticaNeue-UL, HelveticaNeue-Light, Helvetica, Arial,
-    sans-serif;
   font-size: 1.5rem;
   letter-spacing: 2.5px;
   text-transform: none;
@@ -167,7 +164,6 @@ export const ContactInfo = styled.div`
 `;
 
 export const Address = styled.div`
-  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 3px;
   font-weight: 400;
@@ -185,7 +181,6 @@ export const Underline = styled.div`
 `;
 
 export const Email = styled.div`
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 2px;
   color: ${secondary};
@@ -193,7 +188,6 @@ export const Email = styled.div`
 `;
 
 export const Phone = styled.div`
-  font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 1px;
   color: ${secondary};

@@ -17,7 +17,6 @@ export const HeaderText = styled.h3`
   letter-spacing: 4px;
   margin-bottom: 10px;
   font-weight: 400;
-  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
 `;
 
 export const WhiteTextImage = styled.img`

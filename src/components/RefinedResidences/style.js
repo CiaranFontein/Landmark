@@ -28,7 +28,6 @@ export const BannerSubTitle = styled.div`
   font-size: 2.5rem;
   letter-spacing: 1px;
   color: ${primary};
-  font-family: HelveticaNeue-UL, Helvetica-Neue, Helvetica, Arial, sans-serif;
   padding-bottom: 60px;
   opacity: 0.9;
 `;
@@ -44,6 +43,5 @@ export const DiscoverText = styled.div`
   color: ${secondary};
   font-size: 0.7rem;
   letter-spacing: 3px;
-  font-weight: 900;
-  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
 `;

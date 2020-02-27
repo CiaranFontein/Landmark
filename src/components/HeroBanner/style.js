@@ -28,5 +28,4 @@ export const BannerSubTitle = styled.div`
   font-weight: 100;
   font-size: 2.94rem;
   color: #fff;
-  font-family: HelveticaNeue-UL, Helvetica-Neue, Helvetica, Arial, sans-serif;
 `;

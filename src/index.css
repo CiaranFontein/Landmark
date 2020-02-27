@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'HelveticaNeue-UL';
-  src: local('HelveticaNeue-UL'), url(./fonts/HelveticaNeueLTStd-UltLt.woff2) format('woff');
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url(./fonts/HelveticaNeueLTStd-UltLt.woff2) format('woff');
 }
 
 @font-face {
-  font-family: 'HelveticaNeue-Roman';
-  src: local('HelveticaNeue-Roman'), url(./fonts/HelveticaNeueLTStd-Roman.woff2) format('woff');
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url(./fonts/HelveticaNeueLTStd-Roman.woff2) format('woff');
 }
 
 

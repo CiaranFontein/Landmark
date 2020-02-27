@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import {
   StyledHeader,
   HeaderTextLogo,
@@ -17,13 +19,34 @@ import {
   Email,
   Phone,
   Sponsors,
-  SponsorImage
+  SponsorImage,
+  Register,
+  VertLine,
+  StyledLanguageButtonHolder
 } from "./style";
-import LanguageButtonHolder from "../LanguageButtonHolder";
+import theme from "../../styles";
 import heroText from "../../images/landmark.svg";
 import asiaStandard from "../../images/asiaStandard.png";
 import magnum from "../../images/magnum.png";
 import "./styles.css";
+const {
+  colours: { primary, secondary },
+  layout: { flexCenter, flexBetween }
+} = theme;
+
+const StyledLanguageButton = styled.button`
+  color: ${primary};
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.29px;
+  ${props => (props.selected ? "opacity: 1" : "opacity: 0.5")};
+  @media (min-width: 768px) {
+    border: none;
+    text-decoration: none;
+    display: flex;
+    background: none;
+  }
+`;
 
 class Header extends Component {
   constructor(props) {
@@ -80,10 +103,20 @@ class Header extends Component {
         ) : (
           <></>
         )}
-        <LanguageButtonHolder />
+        <StyledLanguageButtonHolder>
+          <StyledLanguageButton selected={true}>En</StyledLanguageButton>
+          <StyledLanguageButton selected={false}>繁體</StyledLanguageButton>
+          <StyledLanguageButton selected={false}>简体}</StyledLanguageButton>
+        </StyledLanguageButtonHolder>
+        <Register>Register</Register>
+        <VertLine />
       </StyledHeader>
     );
   }
 }
+
+StyledLanguageButtonHolder.propTypes = {
+  selected: PropTypes.bool
+};
 
 export default Header;

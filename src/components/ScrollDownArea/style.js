@@ -17,7 +17,7 @@ export const Line = styled.div`
 
 export const ScrollDownText = styled.h1`
   font-weight: 600;
-  font-family: "HelveticaNeue-Light";
+  font-family: "HelveticaNeue-Light", Helvetica, Arial;
   letter-spacing: 2.5px;
   letter-height: 1.5rem;
   left: 20px;

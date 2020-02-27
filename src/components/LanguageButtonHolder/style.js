@@ -8,4 +8,5 @@ export const StyledLanguageButtonHolder = styled.div`
   right: 64px;
   top: 82px;
   height: 76px;
+  z-index: 4;
 `;

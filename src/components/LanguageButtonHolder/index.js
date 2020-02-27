@@ -5,9 +5,9 @@ import LanguageButton from "../LanguageButton";
 const LanguageButtonHolder = () => {
   return (
     <StyledLanguageButtonHolder>
-      <LanguageButton language="En" />
-      <LanguageButton language="繁體" />
-      <LanguageButton language="简体" />
+      <LanguageButton selected={true} language="En" />
+      <LanguageButton selected={false} language="繁體" />
+      <LanguageButton selected={false} language="简体" />
     </StyledLanguageButtonHolder>
   );
 };

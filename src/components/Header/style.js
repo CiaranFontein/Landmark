@@ -12,7 +12,6 @@ export const StyledHeader = styled.div`
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7) 1%,
     rgba(0, 0, 0, 0.5) 61%,
     transparent
   );
@@ -26,5 +25,6 @@ export const HeaderTextLogo = styled.img`
 `;
 
 export const HomeLink = styled.a`
+  z-index: 4;
   width: 160px;
 `;

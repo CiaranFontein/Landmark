@@ -6,4 +6,5 @@ export const StyledLanguageButton = styled.button`
   font-weight: 600;
   letter-spacing: 2.29px;
   text-transform: uppercase;
+  ${props => (props.selected ? "opacity: 1" : "opacity: 0.5")};
 `;

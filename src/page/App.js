@@ -1,13 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import "./App.css";
-import Header from "../components/Header";
-import HeroBanner from "../components/HeroBanner";
-
-const Menu = styled.div``;
+import {
+  Header,
+  HeroBanner,
+  LandmarkLife,
+  Render,
+  ThisIsLandmark,
+  RefinedResidences
+} from "../components";
 
 const PageContent = styled.div`
   width: 100%;
+  background-color: #1c1c26;
 `;
 
 function App() {
@@ -16,6 +21,10 @@ function App() {
       <Header />
       <PageContent>
         <HeroBanner />
+        <LandmarkLife />
+        <Render />
+        <ThisIsLandmark />
+        <RefinedResidences />
       </PageContent>
     </div>
   );

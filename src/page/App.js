@@ -22,7 +22,6 @@ function App() {
       <PageContent>
         <HeroBanner />
         <LandmarkLife />
-        <Render />
         <ThisIsLandmark />
         <RefinedResidences />
       </PageContent>

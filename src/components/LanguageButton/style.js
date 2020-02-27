@@ -10,4 +10,10 @@ export const StyledLanguageButton = styled.button`
   font-weight: 600;
   letter-spacing: 2.29px;
   ${props => (props.selected ? "opacity: 1" : "opacity: 0.5")};
+  @media (min-width: 768px) {
+    border: none;
+    text-decoration: none;
+    display: flex;
+    background: none;
+  }
 `;

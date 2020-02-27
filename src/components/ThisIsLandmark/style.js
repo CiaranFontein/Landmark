@@ -33,3 +33,12 @@ export const WatchFilm = styled.a`
   font-weight: 900;
   margin-top: 30px;
 `;
+
+export const RenderSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;

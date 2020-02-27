@@ -2,7 +2,7 @@ import styled from "styled-components";
 import heroBanner from "../../images/heroBannerSmall.jpg";
 
 export const StyledHeroBanner = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: url(${heroBanner});
   background-repeat: no-repeat;

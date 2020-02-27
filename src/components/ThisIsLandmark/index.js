@@ -3,17 +3,22 @@ import {
   StyledThisIsLandmark,
   HeaderText,
   WhiteTextImage,
-  WatchFilm
+  WatchFilm,
+  RenderSection
 } from "./style";
 import thisIsLandmarkWhite from "../../images/landmarkWhite.svg";
+import { Render } from "../../components";
 
 const ThisIsLandmark = () => {
   return (
-    <StyledThisIsLandmark>
-      <HeaderText>This is</HeaderText>
-      <WhiteTextImage src={thisIsLandmarkWhite} />
-      <WatchFilm>Watch The Film ►</WatchFilm>
-    </StyledThisIsLandmark>
+    <RenderSection>
+      <Render />
+      <StyledThisIsLandmark>
+        <HeaderText>This is</HeaderText>
+        <WhiteTextImage src={thisIsLandmarkWhite} />
+        <WatchFilm>Watch The Film ►</WatchFilm>
+      </StyledThisIsLandmark>
+    </RenderSection>
   );
 };
 

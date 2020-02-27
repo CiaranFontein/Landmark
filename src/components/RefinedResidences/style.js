@@ -11,7 +11,7 @@ export const StyledRefinedResidences = styled.div`
   ${flexCenter}
   flex-direction: column;
   background-repeat: no-repeat;
-  background-size: 700px 100vw;
+  background-size: 700px 100%;
 `;
 
 export const HeaderText = styled.h3`

@@ -23,6 +23,7 @@ import LanguageButtonHolder from "../LanguageButtonHolder";
 import heroText from "../../images/landmark.svg";
 import asiaStandard from "../../images/asiaStandard.png";
 import magnum from "../../images/magnum.png";
+import "./styles.css";
 
 class Header extends Component {
   constructor(props) {
@@ -41,7 +42,11 @@ class Header extends Component {
         <HomeLink>
           <HeaderTextLogo src={heroText} />
         </HomeLink>
-        <StyledHamburger onClick={this.toggleMenu}>
+        <StyledHamburger
+          className={menuOpen ? "header" : "header closed"}
+          onClick={this.toggleMenu}
+          menuOpen={menuOpen}
+        >
           <TopHamburgerLine />
           <MidHamburgerLine />
           <BotHamburgerLine />
@@ -73,7 +78,7 @@ class Header extends Component {
             </StyledMobileMenu>
           </Background>
         ) : (
-          <div></div>
+          <></>
         )}
         <LanguageButtonHolder />
       </StyledHeader>

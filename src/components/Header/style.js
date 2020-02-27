@@ -61,12 +61,12 @@ export const StyledHamburger = styled.div`
   z-index: 4;
   top: 90px;
   height: 54px;
-  width: 40px;
-  animation: ${linesHolderAnim} 0.5s infinite;
+  width: ${props => (props.menuOpen ? "40px" : "20px")};
+  animation: ${linesHolderAnim} 0.5s;
   animation-direction: alternate;
   @media (min-width: 768px) {
     top: 105px;
-    animation: ${bigResLinesHolderAnim} 0.5s infinite;
+    animation: ${bigResLinesHolderAnim} 0.5s;
   }
 `;
 
@@ -101,19 +101,23 @@ const botHamburgerLineAnim = keyframes`
 export const TopHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -60px;
-  animation: ${topHamburgerLineAnim} 0.5s infinite;
+  animation: ${topHamburgerLineAnim} 0.5s;
   animation-direction: alternate;
+  &:hover {
+
+  }
+  
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -50px;
-  animation: ${midHamburgerLineAnim} 0.5s infinite;
+  animation: ${midHamburgerLineAnim} 0.5s;
   animation-direction: alternate;
 `;
 export const BotHamburgerLine = styled.div`
   ${hamburgerLine}
   top: -40px;
-  animation: ${botHamburgerLineAnim} 0.5s infinite;
+  animation: ${botHamburgerLineAnim} 0.5s;
   animation-direction: alternate;
 `;
 

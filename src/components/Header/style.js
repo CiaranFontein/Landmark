@@ -3,18 +3,15 @@ import heroBanner from "../../images/heroBannerSmall.jpg";
 import theme from "../../styles";
 const {
   colours: { secondary, primary },
-  layout: { flexBetween }
+  layout: { flexBetween, flexCenter }
 } = theme;
 
 export const StyledHeader = styled.div`
   width: 100%;
   position: fixed;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${flexBetween}
   height: 90px;
-  transition: 0.5s ease-in;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.7),
@@ -43,31 +40,17 @@ export const HomeLink = styled.a`
 `;
 
 //Hamburger
-const linesHolderAnim = keyframes`
-0% {right: 66px}
-40% {right: 61px}
-100% {right: 61px}
-`;
-
-const bigResLinesHolderAnim = keyframes`
-0% {right: 110px}
-40% {right: 105px}
-100% {right: 105px}
-`;
-
-export const StyledHamburger = styled.div`
-  position: absolute;
-  display: inline-block;
+// width: ${props => (props.menuOpen ? "40px" : "20px")};
+export const StyledHamburger = styled.button`
+  ${flexCenter}
+  display: block;
   z-index: 4;
-  top: 90px;
-  height: 54px;
-  width: ${props => (props.menuOpen ? "40px" : "20px")};
-  animation: ${linesHolderAnim} 0.5s;
-  animation-direction: alternate;
-  @media (min-width: 768px) {
-    top: 105px;
-    animation: ${bigResLinesHolderAnim} 0.5s;
-  }
+  height: 60px;
+  width: 60px;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  background: none;
 `;
 
 const hamburgerLine = `
@@ -78,44 +61,39 @@ border-bottom: 1px solid ${primary};
 `;
 
 const topHamburgerLineAnim = keyframes`
- 0% { top: -60px; width: 40px; }
- 40% { top: -50px; width: 30px; }
- 60% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 2px solid #fff}
- 100% {top: -50px; transform: rotate(45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid #fff}
+ 0% { top: -10px; width: 40px; }
+ 40% { top: 0px; width: 30px; }
+ 60% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 1px solid ${primary}}
+ 100% {top: 0px; transform: rotate(45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary}}
  `;
 
 const midHamburgerLineAnim = keyframes`
-0% {width: 40px;}
+0% {top: 0px; width: 40px;}
 40% {opacity: 1; width: 30px}
 60% {transform: rotate(0deg); width: 30px}
-100%{transform: rotate(45deg); opacity: 0; width: 30px}
+100%{top: 0px; transform: rotate(45deg); opacity: 0; width: 30px}
 `;
 
 const botHamburgerLineAnim = keyframes`
- 0% { top: -40px; width:40px }
- 40% { top: -50px; width: 30px }
- 60% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 2px solid #fff}
- 100% {top: -50px; transform: rotate(-45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid #fff }
+ 0% { top: 10px; width:40px }
+ 40% { top: 0px; width: 30px }
+ 60% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 1px solid ${primary}}
+ 100% {top: 0px; transform: rotate(-45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary} }
  `;
 
 export const TopHamburgerLine = styled.div`
   ${hamburgerLine}
-  top: -60px;
-  animation: ${topHamburgerLineAnim} 0.5s;
+  animation: ${topHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
-  &:hover {
-  }
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
-  top: -50px;
-  animation: ${midHamburgerLineAnim} 0.5s;
+  animation: ${midHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
 `;
 export const BotHamburgerLine = styled.div`
   ${hamburgerLine}
-  top: -40px;
-  animation: ${botHamburgerLineAnim} 0.5s;
+  animation: ${botHamburgerLineAnim} 0.5s infinite;
   animation-direction: alternate;
 `;
 
@@ -128,26 +106,43 @@ export const StyledMobileMenu = styled.div`
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   z-index: 4;
+  @media (min-width: 768px) {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 `;
 
 export const Background = styled.div`
-  position: absolute;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20%;
   z-index: 3;
   height: 100vh;
   width: 100%;
-  top: 0px;
-  left: 0px;
   background-image: url(${heroBanner});
 `;
 
 export const MenuItems = styled.ul`
+  align-self: center;
   display: list-item;
   list-style: none;
   padding-left: 20px;
-  padding-top: 70px;
+  padding-top: 90px;
+  font-weight: 100;
+  ${flexCenter}
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: flex-start;
+  @media (min-width: 768px) {
+    padding: 0px 50px;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -159,7 +154,6 @@ export const ListItem = styled.li`
 `;
 
 export const ContactInfo = styled.div`
-  padding-left: 20px;
   color: ${secondary};
 `;
 
@@ -172,12 +166,16 @@ export const Address = styled.div`
 
 export const Underline = styled.div`
   position: absolute;
-  top: 110px;
+  top: 120px;
   left: 20px;
   height: 1px;
   width: 66px;
   opacity: 0.7;
   border-bottom: 1px solid ${primary};
+  @media (min-width: 768px) {
+    left: 50px;
+    top: 180px;
+  }
 `;
 
 export const Email = styled.div`
@@ -195,57 +193,61 @@ export const Phone = styled.div`
 `;
 
 export const Sponsors = styled.div`
-  padding: 12px 20px;
-  bottom: 0px;
-  height: 80px;
-  width: 70vw;
-  ${flexBetween}
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media (min-width: 768px) {
+    ${flexCenter}
+  }
 `;
 
 export const SponsorImage = styled.img`
   height: 40px;
   width: 80px;
   object-fit: contain;
+  padding-right: 30px;
+  @media (min-width: 768px) {
+    height: 60px;
+    width: 120px;
+  }
 `;
 
 //Language Buttons
 export const StyledLanguageButtonHolder = styled.div`
   ${flexBetween}
   flex-direction: column;
-  position: absolute;
-  right: 64px;
-  top: 82px;
-  height: 76px;
   z-index: 4;
+  position: absolute;
+  top: 80px;
+  right: 32px;
   @media (min-width: 768px) {
     flex-direction: row;
-    right: 290px;
-    top: 22px;
+    top: 0px;
+    right: 0px;
+    position: relative;
   }
 `;
 
 export const VertLine = styled.div`
   display: none;
-  position: absolute;
-  right: 160px;
   border-left: 2px solid ${primary};
   opacity: 0.3;
   height: 50px;
   width: 1px;
+  margin: 0px 20px;
   @media (min-width: 768px) {
-    display: inline-block;
+    display: block;
   }
 `;
 
 export const Register = styled.div`
-  position: absolute;
   display: none;
   font-size: 0.8rem;
   font-weight: 600;
+  margin: 0px 20px;
   color: ${primary};
-  letter-spacing: 2.5px;
-  right: 180px;
+  letter-spacing: 3px;
   @media (min-width: 768px) {
-    display: inline-block;
+    display: block;
   }
 `;

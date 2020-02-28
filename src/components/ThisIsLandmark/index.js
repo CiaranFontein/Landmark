@@ -1,13 +1,6 @@
 import React from "react";
 import render from "../../images/render.jpg";
 import styled from "styled-components";
-import {
-  StyledThisIsLandmark,
-  HeaderText,
-  WhiteTextImage,
-  WatchFilm,
-  RenderSection
-} from "./style";
 import thisIsLandmarkWhite from "../../images/landmarkWhite.svg";
 import theme from "../../styles";
 const {
@@ -51,6 +44,7 @@ export const WatchFilm = styled.a`
 
 export const RenderSection = styled.div`
   ${flexCenter}
+  flex-direction: column;
   @media (min-width: 768px) {
     flex-direction: row;
   }

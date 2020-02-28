@@ -4,8 +4,8 @@ const theme = {
     primary: `#fff`
   },
   layout: {
-    flexBetween: `display: flex; justify-content: space-between;`,
-    flexCenter: `display: flex; justify-content: center; align-items:center;`
+    flexBetween: `display: flex; justify-content: space-between; align-items: center;`,
+    flexCenter: `display: flex; justify-content: center; align-items: center;`
   }
 };
 

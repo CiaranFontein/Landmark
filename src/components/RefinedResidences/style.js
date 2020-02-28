@@ -20,8 +20,8 @@ export const StyledRefinedResidences = styled.div`
 `;
 
 export const HeaderText = styled.h3`
-  letter-spacing: 4.5px;
-  font-size: 0.875rem;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
   font-weight: 400;
   color: ${primary};
 `;
@@ -30,11 +30,15 @@ export const BannerSubTitle = styled.div`
   letter-spacing: 0px;
   left: 20px;
   font-weight: 100;
-  font-size: 4rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
   color: ${primary};
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   opacity: 0.9;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    padding-bottom: 40px;
+  }
 `;
 
 export const DiscoverButton = styled.div`
@@ -55,11 +59,11 @@ export const DiscoverText = styled.div`
 `;
 
 export const SectionInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     position: absolute;
     left: 65%;
   }

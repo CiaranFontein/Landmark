@@ -4,16 +4,19 @@ import {
   HeaderText,
   BannerSubTitle,
   DiscoverButton,
-  DiscoverText
+  DiscoverText,
+  SectionInfo
 } from "./style";
 const RefinedResidences = () => {
   return (
     <StyledRefinedResidences>
-      <HeaderText>Refined</HeaderText>
-      <BannerSubTitle>Residences</BannerSubTitle>
-      <DiscoverButton>
-        <DiscoverText>Discover the Residences</DiscoverText>
-      </DiscoverButton>
+      <SectionInfo>
+        <HeaderText>Refined</HeaderText>
+        <BannerSubTitle>Residences</BannerSubTitle>
+        <DiscoverButton>
+          <DiscoverText>Discover the Residences</DiscoverText>
+        </DiscoverButton>
+      </SectionInfo>
     </StyledRefinedResidences>
   );
 };

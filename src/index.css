@@ -40,3 +40,7 @@
   text-transform: uppercase;
   box-sizing: border-box;
 }
+
+html {
+  background-color: #1c1c26;
+}

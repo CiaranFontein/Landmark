@@ -11,7 +11,7 @@ import {
 
 const PageContent = styled.div`
   width: 100%;
-  background-color: #1c1c26;
+  height: 100%;
 `;
 
 function App() {

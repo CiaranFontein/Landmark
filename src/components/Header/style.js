@@ -81,20 +81,28 @@ const botHamburgerLineAnim = keyframes`
  100% {top: 0px; transform: rotate(-45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary} }
  `;
 
+const botHamburgerLineAnimReverse = keyframes`
+ 100% { top: 10px; width:40px }
+ 60% { top: 0px; width: 30px }
+ 40% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 1px solid ${primary}}
+ 0% {top: 0px; transform: rotate(-45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary} }
+ `;
+
 export const TopHamburgerLine = styled.div`
   ${hamburgerLine}
-  animation: ${topHamburgerLineAnim} 0.5s infinite;
-  animation-direction: alternate;
+  animation: ${topHamburgerLineAnim} 0.5s;
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
-  animation: ${midHamburgerLineAnim} 0.5s infinite;
-  animation-direction: alternate;
+  animation: ${midHamburgerLineAnim} 0.5s;
 `;
 export const BotHamburgerLine = styled.div`
   ${hamburgerLine}
-  animation: ${botHamburgerLineAnim} 0.5s infinite;
-  animation-direction: alternate;
+  animation: ${props =>
+    props.menuOpen ? botHamburgerLineAnim : botHamburgerLineAnimReverse};
+animation-duration:0.5s ;
+animation-iteration-count: infinite;
+      animation-play-state: ${props => (props.menuOpen ? "paused" : "running")};
 `;
 
 //Menu

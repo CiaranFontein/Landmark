@@ -6,7 +6,7 @@ const {
   layout: { flexBetween, flexCenter }
 } = theme;
 
-const hamburgerAnimationTime = "2s";
+const hamburgerAnimationTime = "0.5s";
 
 export const StyledHeader = styled.div`
   width: 100%;

@@ -1,10 +1,10 @@
-.header {}
-
-.closed {}
-
 .centeredChildren {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.centeredChildren:focus {
+    outline: none;
 }

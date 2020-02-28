@@ -103,21 +103,27 @@ const botHamburgerLineAnimReverse = keyframes`
  `;
 
 export const TopHamburgerLine = styled.div`
+  top: ${props => (props.menuOpen ? "0px" : "-10px")};
   ${hamburgerLine}
   animation: ${props =>
-    props.menuOpen ? topHamburgerLineAnim : topHamburgerLineAnimReverse} 0.5s 1;
+    props.menuOpen ? topHamburgerLineAnim : topHamburgerLineAnimReverse} 2s 1;
+    transform: rotate(${props => (props.menuOpen ? "45deg" : "0deg")});
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
   animation: ${props =>
-    props.menuOpen ? midHamburgerLineAnim : midHamburgerLineAnimReverse} 0.5s 1;
+    props.menuOpen ? midHamburgerLineAnim : midHamburgerLineAnimReverse} 2s 1;
+    opacity: ${props => (props.menuOpen ? "0" : "1")};
 
 `;
 export const BotHamburgerLine = styled.div`
+
+top: ${props => (props.menuOpen ? "0px" : "10px")};
   ${hamburgerLine}
   animation: ${props =>
-    props.menuOpen ? botHamburgerLineAnim : botHamburgerLineAnimReverse} 0.5s 1;
-`;
+    props.menuOpen ? botHamburgerLineAnim : botHamburgerLineAnimReverse} 2s 1;
+    transform: rotate(${props => (props.menuOpen ? "-45deg" : "0deg")});
+    `;
 
 //Menu
 export const StyledMobileMenu = styled.div`

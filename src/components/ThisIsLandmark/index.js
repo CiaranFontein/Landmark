@@ -15,6 +15,7 @@ const StyledThisIsLandmark = styled.div`
   @media (min-width: 768px) {
     margin: 5%;
     height: 100%;
+    padding: 30px;
   }
 `;
 
@@ -39,9 +40,11 @@ const HeaderText = styled.h3`
 const WhiteTextImage = styled.img`
   height: 55px;
   width: 203px;
-  margin-bottom: 30px;
   @media (min-width: 768px) {
     margin: 0px 0px 30px;
+    height: 101px;
+    width: 375px;
+    object-fit: cover;
   }
 `;
 

@@ -12,12 +12,20 @@ const StyledThisIsLandmark = styled.div`
   height: 300px;
   ${flexCenter}
   flex-direction: column;
+  @media (min-width: 768px) {
+    margin: 5%;
+    height: 100%;
+  }
 `;
 
 const StyledRender = styled.img`
   height: 370px;
   max-width: 100%;
   object-fit: contain;
+  @media (min-width: 768px) {
+    height: 600px;
+    width: 518px;
+  }
 `;
 
 const HeaderText = styled.h3`
@@ -28,13 +36,16 @@ const HeaderText = styled.h3`
   font-weight: 400;
 `;
 
-export const WhiteTextImage = styled.img`
+const WhiteTextImage = styled.img`
   height: 55px;
   width: 203px;
   margin-bottom: 30px;
+  @media (min-width: 768px) {
+    margin: 0px 0px 30px;
+  }
 `;
 
-export const WatchFilm = styled.a`
+const WatchFilm = styled.a`
   color: ${secondary};
   font-size: 0.6rem;
   letter-spacing: 4px;
@@ -42,7 +53,7 @@ export const WatchFilm = styled.a`
   margin-top: 30px;
 `;
 
-export const RenderSection = styled.div`
+const RenderSection = styled.div`
   ${flexCenter}
   flex-direction: column;
   @media (min-width: 768px) {

@@ -67,11 +67,25 @@ const topHamburgerLineAnim = keyframes`
  100% {top: 0px; transform: rotate(45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary}}
  `;
 
+const topHamburgerLineAnimReverse = keyframes`
+ 100% { top: -10px; width: 40px; }
+ 60% { top: 0px; width: 30px; }
+ 40% { transform: rotate(0deg); width: 30px; opacity: 1; border-bottom: 1px solid ${primary}}
+ 0% {top: 0px; transform: rotate(45deg); width: 30px; opacity: 0.75; border-bottom: 1px solid ${primary}}
+ `;
+
 const midHamburgerLineAnim = keyframes`
 0% {top: 0px; width: 40px;}
 40% {opacity: 1; width: 30px}
 60% {transform: rotate(0deg); width: 30px}
 100%{top: 0px; transform: rotate(45deg); opacity: 0; width: 30px}
+`;
+
+const midHamburgerLineAnimReverse = keyframes`
+100% {top: 0px; width: 40px;}
+60% {opacity: 1; width: 30px}
+40% {transform: rotate(0deg); width: 30px}
+0%{top: 0px; transform: rotate(45deg); opacity: 0; width: 30px}
 `;
 
 const botHamburgerLineAnim = keyframes`
@@ -90,19 +104,19 @@ const botHamburgerLineAnimReverse = keyframes`
 
 export const TopHamburgerLine = styled.div`
   ${hamburgerLine}
-  animation: ${topHamburgerLineAnim} 0.5s;
+  animation: ${props =>
+    props.menuOpen ? topHamburgerLineAnim : topHamburgerLineAnimReverse} 0.5s 1;
 `;
 export const MidHamburgerLine = styled.div`
   ${hamburgerLine}
-  animation: ${midHamburgerLineAnim} 0.5s;
+  animation: ${props =>
+    props.menuOpen ? midHamburgerLineAnim : midHamburgerLineAnimReverse} 0.5s 1;
+
 `;
 export const BotHamburgerLine = styled.div`
   ${hamburgerLine}
   animation: ${props =>
-    props.menuOpen ? botHamburgerLineAnim : botHamburgerLineAnimReverse};
-animation-duration:0.5s ;
-animation-iteration-count: infinite;
-      animation-play-state: ${props => (props.menuOpen ? "paused" : "running")};
+    props.menuOpen ? botHamburgerLineAnim : botHamburgerLineAnimReverse} 0.5s 1;
 `;
 
 //Menu

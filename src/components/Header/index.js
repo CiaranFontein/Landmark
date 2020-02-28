@@ -70,8 +70,6 @@ const FooterContainer = styled.div`
   }
 `;
 
-// className={menuOpen ? "header" : "header closed"}
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -103,9 +101,9 @@ class Header extends Component {
             menuOpen={menuOpen}
           >
             <div className="centeredChildren">
-              <TopHamburgerLine />
-              <MidHamburgerLine />
-              <BotHamburgerLine />
+              <TopHamburgerLine menuOpen={menuOpen} />
+              <MidHamburgerLine menuOpen={menuOpen} />
+              <BotHamburgerLine menuOpen={menuOpen} />
             </div>
           </StyledHamburger>
         </Container>

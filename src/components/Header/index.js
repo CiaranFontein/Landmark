@@ -7,7 +7,7 @@ import {
   TopHamburgerLine,
   MidHamburgerLine,
   BotHamburgerLine
-} from "./style";
+} from "./hamburgerAnimation";
 import theme from "../../styles";
 import heroText from "../../images/landmark.svg";
 import asiaStandard from "../../images/asiaStandard.png";

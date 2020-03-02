@@ -4,7 +4,6 @@ import {
   Header,
   HeroBanner,
   LandmarkLife,
-  Render,
   ThisIsLandmark,
   RefinedResidences
 } from "../components";

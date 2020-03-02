@@ -42,10 +42,10 @@ const LandmarkLife = () => {
         <Parallax className="ultraLight" y={[140, 0]} x={[-20, -20]}>
           i
         </Parallax>
-        <Parallax className="life" y={[100, 0]} x={[20, 20]}>
+        <Parallax className="ultraLight" y={[100, 0]} x={[20, 20]}>
           f
         </Parallax>
-        <Parallax className="life" y={[50, 0]} x={[60, 60]}>
+        <Parallax className="ultraLight" y={[50, 0]} x={[60, 60]}>
           e
         </Parallax>
       </Life>

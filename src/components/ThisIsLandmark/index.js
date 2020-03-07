@@ -3,6 +3,8 @@ import render from "../../images/render.jpg";
 import styled from "styled-components";
 import thisIsLandmarkWhite from "../../images/landmarkWhite.svg";
 import theme from "../../styles";
+import { Parallax } from "react-scroll-parallax";
+
 const {
   colours: { primary, secondary },
   layout: { flexCenter }
@@ -68,11 +70,11 @@ const ThisIsLandmark = () => {
   return (
     <RenderSection>
       <StyledRender src={render} />
-      <StyledThisIsLandmark>
+      <Parallax tagInner="styledThisIsLandmark" y={[200, 0]} x={[-100, 25]}>
         <HeaderText>This is</HeaderText>
         <WhiteTextImage src={thisIsLandmarkWhite} />
         <WatchFilm>Watch The Film ►</WatchFilm>
-      </StyledThisIsLandmark>
+      </Parallax>
     </RenderSection>
   );
 };

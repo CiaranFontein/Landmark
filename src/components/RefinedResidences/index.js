@@ -66,7 +66,7 @@ class RefinedResidences extends Component {
   render() {
     return (
       <StyledRefinedResidences>
-        <Parallax className="sectionInfo" y={[50, 0]} x={[200, 200]}>
+        <Parallax y={[100, -100]} x={[100, 250]}>
           <HeaderText>Refined</HeaderText>
           <BannerSubTitle>Residences</BannerSubTitle>
           <DiscoverButton>

@@ -13,7 +13,6 @@ import heroText from "../../images/landmark.svg";
 import asiaStandard from "../../images/asiaStandard.png";
 import magnum from "../../images/magnum.png";
 import "./styles.css";
-import FadeIn from "react-fade-in";
 const {
   colours: { primary },
   layout: { flexCenter, flexBetween },
@@ -38,7 +37,7 @@ const StyledLanguageButton = styled.button`
   }
 `;
 
-const StyledLanguageButtonHolder = styled.FadeIn`
+const StyledLanguageButtonHolder = styled.div`
   ${flexBetween}
   flex-direction: column;
   z-index: 4;
@@ -158,7 +157,7 @@ const MenuItems = styled.ul`
   }
 `;
 
-const ListItem = styled.FadeIn`
+const ListItem = styled.div`
   color: ${primary};
   margin-bottom: 10px;
   font-size: 1.5rem;
@@ -166,7 +165,7 @@ const ListItem = styled.FadeIn`
   text-transform: none;
 `;
 
-const Underline = styled.FadeIn`
+const Underline = styled.div`
   position: absolute;
   top: 120px;
   left: 20px;
@@ -180,12 +179,12 @@ const Underline = styled.FadeIn`
   }
 `;
 
-const Container = styled.FadeIn`
+const Container = styled.div`
   ${flexBetween}
   z-index: 4;
 `;
 
-const FooterContainer = styled.FadeIn`
+const FooterContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -199,7 +198,7 @@ const FooterContainer = styled.FadeIn`
   }
 `;
 
-const InfoType = styled.FadeIn`
+const InfoType = styled.div`
   ${infoText}
   font-weight: ${props => props.fontWeight}
 `;

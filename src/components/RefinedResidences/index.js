@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import backdrop from "../../images/banner2Small.jpg";
 import theme from "../../styles";
+import { Parallax } from "react-scroll-parallax";
+import "./styles.css";
 const {
   colours: { primary, secondary },
   layout: { flexCenter }
@@ -60,25 +62,17 @@ const DiscoverText = styled.div`
   font-weight: 600;
 `;
 
-const SectionInfo = styled.div`
-  ${flexCenter}
-  flex-direction: column;
-  @media (min-width: 768px) {
-    position: absolute;
-    left: 65%;
-  }
-`;
 class RefinedResidences extends Component {
   render() {
     return (
       <StyledRefinedResidences>
-        <SectionInfo>
+        <Parallax className="sectionInfo" y={[50, 0]} x={[200, 200]}>
           <HeaderText>Refined</HeaderText>
           <BannerSubTitle>Residences</BannerSubTitle>
           <DiscoverButton>
             <DiscoverText>Discover the Residences</DiscoverText>
           </DiscoverButton>
-        </SectionInfo>
+        </Parallax>
       </StyledRefinedResidences>
     );
   }
